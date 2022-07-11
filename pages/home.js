@@ -38,12 +38,12 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="NextJS Material Kit"
+        brand="Alt And Peak Financial"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 400,
+          height: 50,
           color: "white",
         }}
         {...rest}
@@ -53,10 +53,10 @@ export default function Components(props) {
           <GridContainer>
             <GridItem>
               <div className={classes.brand}>
-                <h1 className={classes.title}>NextJS Material Kit.</h1>
+                {/* <h1 className={classes.title}>NextJS Material Kit.</h1>
                 <h3 className={classes.subtitle}>
                   A Badass Material Kit based on Material-UI and NextJS.
-                </h3>
+                </h3> */}
               </div>
             </GridItem>
           </GridContainer>
@@ -64,7 +64,24 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <SectionBasics />
+        <GridContainer className={classes.textCenter} justify="center">
+          <GridItem xs={12} sm={12} md={8} style={{ marginTop: "5%", marginBottom: "5%" }}>
+            <h4 style={{ fontWeight: '600' }}>
+              Offering Canadians a no nonsense, hassle-free approach to clearing up their debt and securing the financing that they want, for whatever comes up in life.
+            </h4>
+            <h3 style={{ fontWeight: '600', color: '#3f3f9d' }}>Last month we helped reduced our clients debt by a total of $550,000</h3>
+            <Link href="/products/creditrepair" as="/products/creditrepair">
+              <Button
+                color="rose"
+                size="lg"
+                round
+              >
+                GET STARTED
+              </Button>
+            </Link>
+          </GridItem>
+        </GridContainer>
+        {/* <SectionBasics />
         <SectionNavbars />
         <SectionTabs />
         <SectionPills />
@@ -73,7 +90,7 @@ export default function Components(props) {
         <SectionJavascript />
         <SectionCarousel />
         <SectionCompletedExamples />
-        <SectionLogin />
+        <SectionLogin /> 
         <GridItem md={12} className={classes.textCenter}>
           <Link href="/login">
             <a className={classes.link}>
@@ -82,9 +99,9 @@ export default function Components(props) {
               </Button>
             </a>
           </Link>
-        </GridItem>
-        <SectionExamples />
-        <SectionDownload />
+        </GridItem> 
+          <SectionExamples /> 
+        <SectionDownload />*/}
       </div>
       <Footer />
     </div>

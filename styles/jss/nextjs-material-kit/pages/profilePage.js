@@ -57,6 +57,11 @@ const profilePageStyle = {
     margin: "20px auto 50px auto",
     textAlign: "center",
   },
+  text_danger: {
+    fontSize: '13px',
+    color: 'red',
+    fontWeight: 400,
+  }
 };
 
 export default profilePageStyle;

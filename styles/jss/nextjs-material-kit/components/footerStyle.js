@@ -11,6 +11,9 @@ const footerStyle = {
     textDecoration: "none",
     position: "relative",
     display: "block",
+    "&,&:hover,&:focus": {
+      color: "inherit",
+    },
   },
   left: {
     float: "left!important",

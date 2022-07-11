@@ -7,12 +7,9 @@ import classNames from "classnames";
 // material-ui core components
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
+ 
 import styles from "styles/jss/nextjs-material-kit/components/footerStyle.js";
-
+ 
 const useStyles = makeStyles(styles);
 
 export default function Footer(props) {
@@ -33,53 +30,44 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/?ref=njsmk-footer"
+                href="http://altandpeakfinancial.com/"
                 className={classes.block}
                 target="_blank"
               >
-                Creative Tim
+                Home
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/presentation?ref=njsmk-footer"
+                href="http://altandpeakfinancial.com/"
                 className={classes.block}
                 target="_blank"
               >
-                About us
+                Partner With Us!
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="http://blog.creative-tim.com/?ref=njsmk-footer"
+                href="http://altandpeakfinancial.com/"
                 className={classes.block}
                 target="_blank"
               >
-                Blog
+                About
               </a>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
               <a
-                href="https://www.creative-tim.com/license?ref=njsmk-footer"
+                href="http://altandpeakfinancial.com/"
                 className={classes.block}
                 target="_blank"
               >
-                Licenses
+                Contact Us
               </a>
             </ListItem>
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=njsmk-footer"
-            className={aClasses}
-            target="_blank"
-          >
-            Creative Tim
-          </a>{" "}
-          for a better web.
+          &copy; {1900 + new Date().getYear()}
         </div>
       </div>
     </footer>

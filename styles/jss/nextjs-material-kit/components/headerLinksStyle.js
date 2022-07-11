@@ -21,6 +21,7 @@ const headerLinksStyle = (theme) => ({
     width: "auto",
     margin: "0",
     padding: "0",
+    color: "black",
     [theme.breakpoints.down("sm")]: {
       width: "100%",
       "&:after": {
@@ -37,8 +38,7 @@ const headerLinksStyle = (theme) => ({
     padding: "0 !important",
   },
   navLink: {
-    color: "inherit",
-    position: "relative",
+     position: "relative",
     padding: "0.9375rem",
     fontWeight: "400",
     fontSize: "12px",
@@ -47,10 +47,12 @@ const headerLinksStyle = (theme) => ({
     lineHeight: "20px",
     textDecoration: "none",
     margin: "0px",
+    color: "black",
     display: "inline-flex",
     "&:hover,&:focus": {
-      color: "inherit",
-      background: "rgba(200, 200, 200, 0.2)",
+      color: "black",
+      fontWeight: "700",
+      // background: "rgba(200, 200, 200, 0.2)",
     },
     [theme.breakpoints.down("sm")]: {
       width: "calc(100% - 30px)",
