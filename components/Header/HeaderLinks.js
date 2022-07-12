@@ -16,11 +16,23 @@ import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "styles/jss/nextjs-material-kit/components/headerLinksStyle.js";
+import { Menu, MenuItem } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
 export default function HeaderLinks(props) {
   const classes = useStyles();
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  function handleClick(event) {
+    if (anchorEl !== event.currentTarget) {
+      setAnchorEl(event.currentTarget);
+    }
+  }
+
+  function handleClose() {
+    setAnchorEl(null);
+  }
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
@@ -45,9 +57,9 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Link href="/partnerwithus">
-          <Button 
+          <Button
             color="transparent"
-             className={classes.navLink}
+            className={classes.navLink}
           >
             Partner with Us!
           </Button>
@@ -55,16 +67,54 @@ export default function HeaderLinks(props) {
       </ListItem>
       <ListItem className={classes.listItem}>
         <Link href="/contactus">
-          <Button 
+          <Button
             color="transparent"
-             className={classes.navLink}
+            className={classes.navLink}
           >
             Contact Us
           </Button>
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
+        <Button
+          aria-owns={anchorEl ? "simple-menu" : undefined}
+          aria-haspopup="true"
+          onClick={handleClick}
+          onMouseOver={handleClick}
+          color="transparent"
+          style={{ color: 'white !important', fontSize: '16px', fontWeight: '500', lineHeight: '20px' }}
+        >
+          Products
+        </Button>
+        <Menu
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={handleClose}
+          MenuListProps={{ onMouseLeave: handleClose }}
+          style={{ padding: 0 }}
+        >
+          <MenuItem onClick={handleClose} style={{ padding: '0px' }}>
+            <Link href="/products/debtreduction">
+              <a className={classes.dropdownLink}>Debt Reduction</a>
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={handleClose} style={{ padding: '0px' }}>
+            <Link href="/products/creditrepair">
+              <a className={classes.dropdownLink}>Credit Repair</a>
+            </Link></MenuItem>
+          <MenuItem onClick={handleClose} style={{ padding: '0px' }}>
+            <Link href="/products/mortgage">
+              <a className={classes.dropdownLink}>Mortgage</a>
+            </Link>
+          </MenuItem>
+          <MenuItem onClick={handleClose} style={{ padding: '0px' }}>
+            <Link href="/products/autofinance">
+              <a className={classes.dropdownLink}>Auto Finance</a>
+            </Link>
+          </MenuItem>
+        </Menu>
+      </ListItem>
+      {/* <CustomDropdown
           noLiPadding
           navDropdown
           buttonText="Products"
@@ -86,8 +136,8 @@ export default function HeaderLinks(props) {
               <a className={classes.dropdownLink}>Auto Finance</a>
             </Link>
           ]}
-        />
-      </ListItem>
-    </List>
+        />*/}
+    </List >
+
   );
 }
