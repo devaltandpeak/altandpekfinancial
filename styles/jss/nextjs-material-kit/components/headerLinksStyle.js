@@ -46,6 +46,7 @@ const headerLinksStyle = (theme) => ({
     borderRadius: "3px",
     lineHeight: "20px",
     textDecoration: "none",
+    boxShadow: 'none !important',
     margin: "0px",
     color: "white !important",
     display: "inline-flex",

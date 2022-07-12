@@ -6,8 +6,6 @@ import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-
-
 // @material-ui/icons
 
 
@@ -23,7 +21,7 @@ const useStyles = makeStyles(styles);
 export default function HeaderLinks(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-
+  
   function handleClick(event) {
     if (anchorEl !== event.currentTarget) {
       setAnchorEl(event.currentTarget);
@@ -75,14 +73,13 @@ export default function HeaderLinks(props) {
           </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      <ListItem className={classes.listItem} >
         <Button
-          aria-owns={anchorEl ? "simple-menu" : undefined}
-          aria-haspopup="true"
           onClick={handleClick}
           onMouseOver={handleClick}
-          color="transparent"
-          style={{ color: 'white !important', fontSize: '16px', fontWeight: '500', lineHeight: '20px' }}
+          style={{ fontSize: '16px', backgroundColor: 'transparent', fontWeight: '500', lineHeight: '20px', color: 'white !important', boxShadow: 'none !important' }}
+          className={classes.navLink}
+
         >
           Products
         </Button>
@@ -91,6 +88,7 @@ export default function HeaderLinks(props) {
           open={Boolean(anchorEl)}
           onClose={handleClose}
           MenuListProps={{ onMouseLeave: handleClose }}
+          disableScrollLock={true}
           style={{ padding: 0 }}
         >
           <MenuItem onClick={handleClose} style={{ padding: '0px' }}>
