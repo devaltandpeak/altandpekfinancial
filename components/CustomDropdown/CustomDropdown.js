@@ -83,13 +83,13 @@ export default function CustomDropdown(props) {
   }
   return (
     <div>
-      <div>
+      <div onMouseOver={handleClick}>
         <Button
           aria-label="Notifications"
           aria-owns={anchorEl ? "menu-list" : null}
           aria-haspopup="true"
           {...buttonProps}
-          onClick={handleClick}
+          onMouseOver={handleClick}
         >
           {icon}
           {buttonText !== undefined ? buttonText : null}
