@@ -82,7 +82,7 @@ export default class MyApp extends App {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <title>Alt And Peak Financial</title>
+          <title>Alt and Peak Financial</title>
         </Head>
         <Component {...pageProps} />
       </React.Fragment>

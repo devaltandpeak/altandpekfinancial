@@ -6,10 +6,10 @@ import Link from "next/link";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
- 
+
 
 // @material-ui/icons
- 
+
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
@@ -24,28 +24,6 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        {/* <CustomDropdown
-          noLiPadding
-          navDropdown
-          buttonText="Components"
-          buttonProps={{
-            className: classes.navLink,
-            color: "transparent",
-          }}
-          buttonIcon={Apps}
-          dropdownList={[
-            <Link href="/components">
-              <a className={classes.dropdownLink}>All components</a>
-            </Link>,
-            <a
-              href="https://creativetimofficial.github.io/nextjs-material-kit/#/documentation?ref=njsmk-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>,
-          ]}
-        /> */}
         <Link href="/home">
           <Button
             color="transparent"
@@ -56,57 +34,9 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link href="">
-          <Button
-            href="http://altandpeakfinancial.com/"
-            color="transparent"
-            target="_blank"
-            className={classes.navLink}
-          >
-            Debt Reduction
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link href="/products/creditrepair" as="/products/creditrepair">
+        <Link href="/aboutus">
           <Button
             color="transparent"
-            className={classes.navLink}
-          >
-            Credit Repair
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link href="">
-          <Button
-            href="http://altandpeakfinancial.com/"
-            color="transparent"
-            target="_blank"
-            className={classes.navLink}
-          >
-            Mortgage
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link href="">
-          <Button
-            href="http://altandpeakfinancial.com/"
-            color="transparent"
-            target="_blank"
-            className={classes.navLink}
-          >
-            Auto Finance
-          </Button>
-        </Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link href="">
-          <Button
-            href="http://altandpeakfinancial.com/"
-            color="transparent"
-            target="_blank"
             className={classes.navLink}
           >
             About
@@ -114,28 +44,49 @@ export default function HeaderLinks(props) {
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link href="">
-          <Button
-            href="http://altandpeakfinancial.com/"
+        <Link href="/partnerwithus">
+          <Button 
             color="transparent"
-            target="_blank"
-            className={classes.navLink}
+             className={classes.navLink}
           >
             Partner with Us!
           </Button>
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link href="">
-          <Button
-            href="http://altandpeakfinancial.com/"
+        <Link href="/contactus">
+          <Button 
             color="transparent"
-            target="_blank"
-            className={classes.navLink}
+             className={classes.navLink}
           >
             Contact Us
           </Button>
         </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <CustomDropdown
+          noLiPadding
+          navDropdown
+          buttonText="Products"
+          buttonProps={{
+            className: classes.navLink,
+            color: "transparent",
+          }}
+          dropdownList={[
+            <Link href="/products/debtreduction">
+              <a className={classes.dropdownLink}>Debt Reduction</a>
+            </Link>,
+            <Link href="/products/creditrepair">
+              <a className={classes.dropdownLink}>Credit Repair</a>
+            </Link>,
+            <Link href="/products/mortgage">
+              <a className={classes.dropdownLink}>Mortgage</a>
+            </Link>,
+            <Link href="/products/autofinance">
+              <a className={classes.dropdownLink}>Auto Finance</a>
+            </Link>
+          ]}
+        />
       </ListItem>
     </List>
   );

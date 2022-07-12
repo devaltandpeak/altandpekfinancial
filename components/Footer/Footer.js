@@ -7,9 +7,10 @@ import classNames from "classnames";
 // material-ui core components
 import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
- 
+
 import styles from "styles/jss/nextjs-material-kit/components/footerStyle.js";
- 
+import Link from "next/link";
+
 const useStyles = makeStyles(styles);
 
 export default function Footer(props) {
@@ -29,40 +30,24 @@ export default function Footer(props) {
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://altandpeakfinancial.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Home
-              </a>
+              <Link href="/home">
+                <a className={classes.block}> Home</a>
+              </Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://altandpeakfinancial.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Partner With Us!
-              </a>
+              <Link href="/partnerwithus">
+                <a className={classes.block}> Partner With Us!</a>
+              </Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://altandpeakfinancial.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                About
-              </a>
+              <Link href="/aboutus">
+                <a className={classes.block}> About</a>
+              </Link>
             </ListItem>
             <ListItem className={classes.inlineBlock}>
-              <a
-                href="http://altandpeakfinancial.com/"
-                className={classes.block}
-                target="_blank"
-              >
-                Contact Us
-              </a>
+              <Link href="/contactus">
+                <a className={classes.block}> Contact Us</a>
+              </Link>
             </ListItem>
           </List>
         </div>

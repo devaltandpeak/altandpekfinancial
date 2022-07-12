@@ -38,13 +38,13 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Alt And Peak Financial"
+        brand="Alt and Peak Financial"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 50,
-          color: "white",
+          color: "#177CB0",
         }}
         {...rest}
       />

@@ -61,6 +61,13 @@ const profilePageStyle = {
     fontSize: '13px',
     color: 'red',
     fontWeight: 400,
+  },
+  appformMobileNumber:{
+    border: "none",
+    borderBottom: "2px solid #c0bcbc",
+    width: "100%",
+    fontSize: "1rem",
+    marginTop: "10%",
   }
 };
 

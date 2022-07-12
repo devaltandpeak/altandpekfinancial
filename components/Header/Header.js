@@ -57,7 +57,7 @@ export default function Header(props) {
   const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
-    [classes[color]]: color,
+    [classes[color]]: "#177CB0",
     [classes.absolute]: absolute,
     [classes.fixed]: fixed,
   });
@@ -67,7 +67,7 @@ export default function Header(props) {
     </Link>
   );
   return (
-    <AppBar className={appBarClasses}>
+    <AppBar className={appBarClasses} style={{ backgroundColor: "#177CB0" }}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
         <div className={classes.flex}>
@@ -84,7 +84,7 @@ export default function Header(props) {
         </Hidden>
         <Hidden mdUp>
           <IconButton
-            color="inherit"
+            color="info"
             aria-label="open drawer"
             onClick={handleDrawerToggle}
           >
@@ -113,7 +113,7 @@ export default function Header(props) {
 }
 
 Header.defaultProp = {
-  color: "white",
+  color: "dark",
 };
 
 Header.propTypes = {
