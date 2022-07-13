@@ -24,6 +24,8 @@ const useStyles = makeStyles(styles);
 
 function CommonLastForm(props) {
     const query = useRouter();
+    const leadTypeSperator = query.route.split('/')
+    const leadType = leadTypeSperator.slice(-1).pop();
 
     const classes = useStyles();
     const { postData } = props;
@@ -100,8 +102,7 @@ function CommonLastForm(props) {
                 const SubmitLead = () => {
                     // console.log("values", values, postData);
                     const cleanphone = values.phone.replace(/[\W]/g, "");
-                    const leadTypeSperator = query.route.split('/')
-                    const leadType = leadTypeSperator.slice(-1).pop();
+
                     const data = {
                         firstName: postData.firstName,
                         lastName: postData.lastName,
@@ -188,7 +189,7 @@ function CommonLastForm(props) {
                                     <div className={classes.text_danger}>{errors.phone}</div>
                                 )}
                             </div>
-                            <div style={{
+                            {leadType === 'debtreduction' ? <div style={{
                                 marginBottom: '30px', width: '80%',
                                 marginLeft: '10%'
                             }}>
@@ -208,7 +209,7 @@ function CommonLastForm(props) {
                                         </MenuItem>
                                     ))}
                                 </TextField>
-                            </div>
+                            </div> : ''}
                             <Button
                                 type="submit"
                                 color="rose"
