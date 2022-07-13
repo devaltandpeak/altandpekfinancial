@@ -49,12 +49,11 @@ function CommonForm(props) {
     return (
 
         <Parallax>
-
             <div className={classes.container} >
                 <GridContainer justify="flex-end">
                     <GridItem xs={12} sm={12} md={4}>
                         <Card style={{ marginTop: '100px' }}>
-                            {!showNext && <CardHeader title="Get Started" style={{ textAlign: 'center', marginTop: '30px', color: '#e91e63' }} />}
+                            {!showNext && <CardHeader title="Fill out the form for a free consultation" style={{ textAlign: 'center', marginTop: '30px', color: '#e91e63' }} />}
                             {showNext && <CardHeader title="Last Step To Finish" style={{ textAlign: 'center', marginTop: '30px', color: '#e91e63' }} />}
 
                             <form className={classes.form} onSubmit={formik.handleSubmit}>

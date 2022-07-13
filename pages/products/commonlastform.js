@@ -128,7 +128,9 @@ function CommonLastForm(props) {
                         "https://phplaravel-802492-2747645.cloudwaysapps.com/api/postSandBoxLead";
                     fetch(apiUrl, options)
                         .then((response) => {
-                            console.log("response", response);
+                            if (!response.ok) {
+                                throw Error(response.statusText);
+                            }
                             alert(
                                 "Your improved credit score is on its way. \nOne of our credit specialist will reach out to you within 24 hours."
                             );
