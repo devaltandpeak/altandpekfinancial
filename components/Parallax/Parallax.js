@@ -51,16 +51,22 @@ export default function Parallax(props) {
     [className]: className !== undefined,
   });
   return (
-    <div
-      className={parallaxClasses}
-      style={{
-        ...style,
-        backgroundImage: "url(" + image + ")",
-        transform: transform,
-      }}
-    >
-      {children}
+    <div style={{overflowX:"hidden"}}>
+      <video loop muted controls fullwidht autoPlay >
+        <source src="img/Himalaya.mp4" type="video/mp4" />
+        {children}
+      </video>
     </div>
+    // <div
+    //   className={parallaxClasses}
+    //   style={{
+    //     ...style,
+    //     backgroundImage: "url(" + image + ")",
+    //     transform: transform,
+    //   }}
+    // >
+    //   
+    // </div>
   );
 }
 

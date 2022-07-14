@@ -48,7 +48,9 @@ export default function Components(props) {
         }}
         {...rest}
       />
-      <Parallax image="/img/nextjs_header.jpg">
+      {/* <Parallax image="/img/nextjs_header.jpg"> */}
+      <Parallax >
+
         <div className={classes.container}>
           <GridContainer>
             <GridItem>
@@ -61,7 +63,10 @@ export default function Components(props) {
             </GridItem>
           </GridContainer>
         </div>
+
       </Parallax>
+      
+
 
       <div className={classNames(classes.main, classes.mainRaised)}>
         <GridContainer className={classes.textCenter} justify="center">
